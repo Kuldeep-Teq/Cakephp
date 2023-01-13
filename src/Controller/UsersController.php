@@ -235,8 +235,8 @@ class UsersController extends AppController
     public function resetpassword($token)
     {
         if ($this->request->is('post')) {
-            $hasher = new DefaultPasswordHasher();
-            $newPass = $hasher->hash($this->request->getData('password'));
+            // $hasher = new DefaultPasswordHasher();
+            $newPass = $this->request->getData('password');
 
             $userTable = TableRegistry::get('Users');
             $user = $userTable->find('all')->where(['token' => $token])->first();
@@ -246,21 +246,5 @@ class UsersController extends AppController
                 return $this->redirect(['action' => 'login']);
             }
         }
-    }
-
-    public function userStatus($id = null, $status)
-    {
-        $this->request->allowMethod(['post']);
-        $user = $this->Users->get($id);
-
-        if ($status == 1)
-            $user->status = 0;
-        else
-            $user->status = 1;
-
-        if ($this->Users->save($user)) {
-            $this->Flash->success(__('The users status has changed.'));
-        }
-        return $this->redirect(['action' => 'index']);
     }
 }

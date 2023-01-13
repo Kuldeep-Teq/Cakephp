@@ -24,11 +24,7 @@
                     <th><?= $this->Paginator->sort('created_date') ?></th>
                     <th><?= $this->Paginator->sort('modified_date') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
-                </tr><?php if ($user->status == 1) : ?>
-                    <?= $this->Form->postLink(__('Deactivate'), ['action' => 'userStatus', $user->id, $user->status], ['block' => true, 'confirm' => __('Are you sure you want to deactivate # {0}?', $user->id), 'class' => 'button', 'escape' => false, 'title' => 'Deactivate Account']) ?>
-                <?php else : ?>
-                    <?= $this->Form->postLink(__('Activate'), ['action' => 'userStatus', $user->id, $user->status], ['block' => true, 'confirm' => __('Are you sure you want to activate # {0}?', $user->id), 'class' => 'button', 'escape' => false, 'title' => 'Activate Account']) ?>
-                <?php endif; ?>
+                </tr>
             </thead>
             <tbody>
                 <?php foreach ($users as $user) : ?>
@@ -63,9 +59,5 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 
-    <?php if ($user->status == 1) : ?>
-        <?= $this->Form->postLink(__('Deactivate'), ['action' => 'userStatus', $user->id, $user->status], ['block' => true, 'confirm' => __('Are you sure you want to deactivate # {0}?', $user->id), 'class' => 'button', 'escape' => false, 'title' => 'Deactivate Account']) ?>
-    <?php else : ?>
-        <?= $this->Form->postLink(__('Activate'), ['action' => 'userStatus', $user->id, $user->status], ['block' => true, 'confirm' => __('Are you sure you want to activate # {0}?', $user->id), 'class' => 'button', 'escape' => false, 'title' => 'Activate Account']) ?>
-    <?php endif; ?>
+
 </div>
