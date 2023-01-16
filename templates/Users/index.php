@@ -27,9 +27,13 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user) : ?>
+                <?php
+                $sno = 1;
+                foreach ($users as $user) :
+                ?>
                     <tr>
-                        <td><?= $this->Number->format($user->id) ?></td>
+                        <!-- <td><?= $this->Number->format($user->id) ?></td> -->
+                        <td><?= $sno++ ?></td>
                         <td><?= $this->Html->image(h($user->image), array('width' => '80px')) ?></td>
                         <td><?= h($user->first_name) ?></td>
                         <td><?= h($user->last_name) ?></td>
@@ -61,3 +65,4 @@
 
 
 </div>
+<?php $this->Html->css('style', ['block' => 'css']); ?>

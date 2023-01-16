@@ -12,6 +12,9 @@
     <?php echo $this->Html->script('bootstrap.min.js'); ?>
     <title>CAKE PHP</title>
 
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
 </head>
 
 <body>
