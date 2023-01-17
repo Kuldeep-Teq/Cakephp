@@ -54,7 +54,7 @@ return static function (RouteBuilder $routes) {
          */
         $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
-        $builder->connect('/form/register', ['controller' => 'Users', 'action' => 'add']);
+        // $builder->connect('/form/register', ['controller' => 'Users', 'action' => 'add']);
 
         /*
          * ...and connect the rest of 'Pages' controller's URLs.

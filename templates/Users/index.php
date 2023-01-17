@@ -28,7 +28,7 @@
             </thead>
             <tbody>
                 <?php
-                $sno = 1;
+                $sno = $this->Paginator->counter('{{start}}');
                 foreach ($users as $user) :
                 ?>
                     <tr>

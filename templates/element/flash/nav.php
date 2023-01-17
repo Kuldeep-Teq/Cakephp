@@ -9,8 +9,8 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                <li class="nav-item"><br>
+                    <?= $this->Html->link(__('register'), ['action' => 'add']) ?>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" tabindex="-1">Logout</a>

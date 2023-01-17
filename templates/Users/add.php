@@ -25,6 +25,8 @@
                 echo $this->Form->control('phone_number', ['required' => 'false']);
                 echo $this->Form->control('password', ['required' => 'false']);
                 echo $this->Form->control('gender', ['required' => 'false']);
+                echo $this->Form->control('profile.role', ['required' => 'false']);
+                echo $this->Form->control('profile.company', ['required' => 'false']);
                 echo $this->Form->control('created_date', ['required' => 'false']);
                 echo $this->Form->control('modified_date', ['required' => 'false']);
                 ?>

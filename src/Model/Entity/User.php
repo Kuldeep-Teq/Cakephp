@@ -39,6 +39,7 @@ class User extends Entity
         'phone_number' => true,
         'password' => true,
         'gender' => true,
+        'profile' => true,
         'created_date' => true,
         'modified_date' => true,
     ];
